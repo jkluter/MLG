@@ -1,2 +1,0 @@
-# MLG
-Microlensing with Gaia
