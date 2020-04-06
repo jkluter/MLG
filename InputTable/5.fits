@@ -1,0 +1,321 @@
+SIMPLE  =                    T / Standard FITS format                           BITPIX  =                    8 / Character data                                 NAXIS   =                    1 / Text string                                    NAXIS1  =                16540 / Number of characters                           VOTMETA =                    T / Table metadata in VOTable format               EXTEND  =                    T / There are standard extensions                  COMMENT                                                                         COMMENT The data in this primary HDU consists of bytes which                    COMMENT comprise a VOTABLE document.                                            COMMENT The VOTable describes the metadata of the table contained               COMMENT in the following BINTABLE extension.                                    COMMENT Such a BINTABLE extension can be used on its own as a perfectly         COMMENT good table, but the information from this HDU may provide some          COMMENT useful additional metadata.                                             COMMENT There is one following BINTABLE.                                        NTABLE  =                    1 / Number of following BINTABLE HDUs              END                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             <?xml version='1.0' encoding='UTF-8'?>
+<VOTABLE version='1.1'>
+<!--
+ !  VOTable written by uk.ac.starlink.votable.FitsPlusTableWriter
+ !  Describes BINTABLE extensions in following HDUs
+ !-->
+<RESOURCE>
+<TABLE name="Joined" nrows="5">
+<DESCRIPTION>
+Experimental stuff. Please ignore.  (gaia_source names are the
+    lenses; names with ob_ in front are lensed objects)
+</DESCRIPTION>
+<PARAM arraysize="23" datatype="char" name="Match type" value="Pair match; All matches">
+<DESCRIPTION>Type of match which created this table</DESCRIPTION>
+</PARAM>
+<PARAM arraysize="11" datatype="char" name="Match algorithm" value="Exact Value">
+<DESCRIPTION>Matching algorithm which created this table</DESCRIPTION>
+</PARAM>
+<PARAM arraysize="82" datatype="char" name="Join Type" value="1 and 2 (An output row for each row represented in both input tables (INNER JOIN))">
+<DESCRIPTION>Determines which rows appear in output table</DESCRIPTION>
+</PARAM>
+<PARAM arraysize="18" datatype="char" name="First input table" value="2: result_data.vot"/>
+<PARAM arraysize="18" datatype="char" name="Second input table" value="2: result_data.vot"/>
+<PARAM arraysize="43" datatype="char" name="Match type" value="Pair match; Best match for each Table 2 row">
+<DESCRIPTION>Type of match which created this table</DESCRIPTION>
+</PARAM>
+<PARAM arraysize="11" datatype="char" name="Match algorithm" value="Exact Value">
+<DESCRIPTION>Matching algorithm which created this table</DESCRIPTION>
+</PARAM>
+<PARAM arraysize="82" datatype="char" name="Join Type" value="1 and 2 (An output row for each row represented in both input tables (INNER JOIN))">
+<DESCRIPTION>Determines which rows appear in output table</DESCRIPTION>
+</PARAM>
+<PARAM arraysize="13" datatype="char" name="First input table" value="5: match(2,2)"/>
+<PARAM arraysize="18" datatype="char" name="Second input table" value="2: result_data.vot"/>
+<FIELD ID="source_id" datatype="long" name="source_id" ucd="meta.id;meta.main">
+<DESCRIPTION>Unique source identifier. Note that this *cannot* be matched
+     against the DR1 source_id.</DESCRIPTION>
+<VALUES null='-9223372036854775808'/>
+</FIELD>
+<FIELD ID="ra" datatype="double" name="ra" ucd="pos.eq.ra;meta.main" unit="deg">
+<DESCRIPTION>Barycentric Right Ascension in ICRS at ref_epoch</DESCRIPTION>
+</FIELD>
+<FIELD ID="dec" datatype="double" name="dec" ucd="pos.eq.dec;meta.main" unit="deg">
+<DESCRIPTION>Barycentric Declination in ICRS at ref_epoch</DESCRIPTION>
+</FIELD>
+<FIELD ID="ra_error" datatype="float" name="ra_error" ucd="stat.error;pos.eq.ra" unit="mas">
+<DESCRIPTION>Standard error of ra (with cos Œ¥ applied).</DESCRIPTION>
+</FIELD>
+<FIELD ID="dec_error" datatype="float" name="dec_error" ucd="stat.error;pos.eq.dec" unit="mas">
+<DESCRIPTION>Standard error of dec</DESCRIPTION>
+</FIELD>
+<FIELD ID="pmra" datatype="float" name="pmra" ucd="pos.pm;pos.eq.ra" unit="mas.yr-1">
+<DESCRIPTION>Proper motion in right ascension of the source in ICRS at
+     ref_epoch. This is the projection of the proper motion vector in
+     the direction of increasing right ascension.</DESCRIPTION>
+</FIELD>
+<FIELD ID="pmdec" datatype="float" name="pmdec" ucd="pos.pm;pos.eq.dec" unit="mas.yr-1">
+<DESCRIPTION>Proper motion in declination at ref_epoch.</DESCRIPTION>
+</FIELD>
+<FIELD ID="pmra_error" datatype="float" name="pmra_error" ucd="stat.error;pos.pm;pos.eq.ra" unit="mas.yr-1">
+<DESCRIPTION>Standard error of pmra</DESCRIPTION>
+</FIELD>
+<FIELD ID="pmdec_error" datatype="float" name="pmdec_error" ucd="stat.error;pos.pm;pos.eq.dec" unit="mas.yr-1">
+<DESCRIPTION>Standard error of pmdec</DESCRIPTION>
+</FIELD>
+<FIELD ID="parallax" datatype="float" name="parallax" ucd="pos.parallax" unit="mas">
+<DESCRIPTION>Absolute barycentric stellar parallax of the source at the
+     reference epoch ref_epoch</DESCRIPTION>
+</FIELD>
+<FIELD ID="parallax_error" datatype="float" name="parallax_error" ucd="stat.error;pos.parallax" unit="mas">
+<DESCRIPTION>Standard error of parallax</DESCRIPTION>
+</FIELD>
+<FIELD ID="phot_g_mean_mag" datatype="float" name="phot_g_mean_mag" ucd="phot.mag;em.opt;stat.mean" unit="mag">
+<DESCRIPTION>Mean magnitude in the G band. This is computed from the G-band
+     mean flux applying the magnitude zero-point in the Vega scale.</DESCRIPTION>
+</FIELD>
+<FIELD ID="phot_rp_mean_mag" datatype="float" name="phot_rp_mean_mag" ucd="phot.mag;em.opt.R" unit="mag">
+<DESCRIPTION>Mean magnitude in the integrated RP band. This is computed from
+     the RP-band mean flux applying the magnitude zero-point in the
+     Vega scale. No error is provided for this quantity as the error
+     distribution is only symmetric in flux space. For errors small
+     compared to the flux (less than 10%, say), the magnitude error is
+     well approximated by 1.09*flux/flux_err.</DESCRIPTION>
+</FIELD>
+<FIELD ID="phot_bp_mean_mag" datatype="float" name="phot_bp_mean_mag" ucd="phot.mag;em.opt.B" unit="mag">
+<DESCRIPTION>Mean magnitude in the integrated BP band. This is computed from
+     the BP-band mean flux applying the magnitude zero-point in the
+     Vega scale. No error is provided for this quantity as the error
+     distribution is only symmetric in flux space. For errors small
+     compared to the flux (less than 10%, say), the magnitude error is
+     well approximated by 1.09*flux/flux_err.</DESCRIPTION>
+</FIELD>
+<FIELD ID="roi" arraysize="8" datatype="double" name="roi">
+<DESCRIPTION>A polygon estimating the area swept over by this star within 50
+     years</DESCRIPTION>
+</FIELD>
+<FIELD ID="ob_source_id" datatype="long" name="ob_source_id" ucd="meta.id;meta.main">
+<DESCRIPTION>source_id value for the lensed object</DESCRIPTION>
+<VALUES null='-9223372036854775808'/>
+</FIELD>
+<FIELD ID="ob_ra" datatype="double" name="ob_ra" ucd="pos.eq.ra;meta.main" unit="deg">
+<DESCRIPTION>ra value for the lensed object</DESCRIPTION>
+</FIELD>
+<FIELD ID="ob_dec" datatype="double" name="ob_dec" ucd="pos.eq.dec;meta.main" unit="deg">
+<DESCRIPTION>dec value for the lensed object</DESCRIPTION>
+</FIELD>
+<FIELD ID="ob_ra_error" datatype="float" name="ob_ra_error" ucd="stat.error;pos.eq.ra" unit="mas">
+<DESCRIPTION>ra_error value for the lensed object</DESCRIPTION>
+</FIELD>
+<FIELD ID="ob_dec_error" datatype="float" name="ob_dec_error" ucd="stat.error;pos.eq.dec" unit="mas">
+<DESCRIPTION>dec_error value for the lensed object</DESCRIPTION>
+</FIELD>
+<FIELD ID="ob_pmra" datatype="float" name="ob_pmra" ucd="pos.pm;pos.eq.ra" unit="mas.yr-1">
+<DESCRIPTION>pmra value for the lensed object</DESCRIPTION>
+</FIELD>
+<FIELD ID="ob_pmdec" datatype="float" name="ob_pmdec" ucd="pos.pm;pos.eq.dec" unit="mas.yr-1">
+<DESCRIPTION>pmdec value for the lensed object</DESCRIPTION>
+</FIELD>
+<FIELD ID="ob_pmra_error" datatype="float" name="ob_pmra_error" ucd="stat.error;pos.pm;pos.eq.ra" unit="mas.yr-1">
+<DESCRIPTION>pmra_error value for the lensed object</DESCRIPTION>
+</FIELD>
+<FIELD ID="ob_pmdec_error" datatype="float" name="ob_pmdec_error" ucd="stat.error;pos.pm;pos.eq.dec" unit="mas.yr-1">
+<DESCRIPTION>pmdec_error value for the lensed object</DESCRIPTION>
+</FIELD>
+<FIELD ID="ob_parallax" datatype="float" name="ob_parallax" ucd="pos.parallax" unit="mas">
+<DESCRIPTION>parallax value for the lensed object</DESCRIPTION>
+</FIELD>
+<FIELD ID="ob_parallax_error" datatype="float" name="ob_parallax_error" ucd="stat.error;pos.parallax" unit="mas">
+<DESCRIPTION>parallax_error value for the lensed object</DESCRIPTION>
+</FIELD>
+<FIELD ID="ob_phot_g_mean_mag" datatype="float" name="ob_phot_g_mean_mag" ucd="phot.mag;em.opt;stat.mean" unit="mag">
+<DESCRIPTION>phot_g_mean_mag value for the lensed object</DESCRIPTION>
+</FIELD>
+<FIELD ID="ob_phot_rp_mean_mag" datatype="float" name="ob_phot_rp_mean_mag" ucd="phot.mag;em.opt.R" unit="mag">
+<DESCRIPTION>phot_rp_mean_mag value for the lensed object</DESCRIPTION>
+</FIELD>
+<FIELD ID="ob_phot_bp_mean_mag" datatype="float" name="ob_phot_bp_mean_mag" ucd="phot.mag;em.opt.B" unit="mag">
+<DESCRIPTION>phot_bp_mean_mag value for the lensed object</DESCRIPTION>
+</FIELD>
+<FIELD ID="star_type" arraysize="2" datatype="char" name="star_type">
+<DESCRIPTION>Type of the lensing star: WD = White Dwarf, MS = Main Sequence,
+     RG = Red Giant, BD = Brown Dwarf</DESCRIPTION>
+</FIELD>
+<FIELD ID="mass" datatype="double" name="mass" unit="solMass">
+<DESCRIPTION>Mass of the lensing star</DESCRIPTION>
+</FIELD>
+<FIELD ID="mass_error" datatype="double" name="mass_error" unit="solMass">
+<DESCRIPTION>Error of the Mass of the lensing star</DESCRIPTION>
+</FIELD>
+<FIELD ID="thetaE" datatype="double" name="thetaE" unit="mas">
+<DESCRIPTION>Einstein radius of the event</DESCRIPTION>
+</FIELD>
+<FIELD ID="thetaE_error" datatype="double" name="thetaE_error" unit="mas">
+<DESCRIPTION>Error of the Einstein radius</DESCRIPTION>
+</FIELD>
+<FIELD ID="time_scale" datatype="double" name="time_scale" unit="yr">
+<DESCRIPTION>Approximated duration of an event</DESCRIPTION>
+</FIELD>
+<FIELD ID="approx_date" datatype="double" name="approx_date" unit="yr">
+<DESCRIPTION>Time of the approximated closest approch</DESCRIPTION>
+</FIELD>
+<FIELD ID="approx_date_error" datatype="double" name="approx_date_error" unit="yr">
+<DESCRIPTION>Error of the Time of the approximated closest approch</DESCRIPTION>
+</FIELD>
+<FIELD ID="approx_dist" datatype="double" name="approx_dist" unit="mas">
+<DESCRIPTION>Approximated closest distance</DESCRIPTION>
+</FIELD>
+<FIELD ID="approx_dist_error" datatype="double" name="approx_dist_error" unit="mas">
+<DESCRIPTION>Error of approximated closest distance</DESCRIPTION>
+</FIELD>
+<FIELD ID="approx_u" datatype="double" name="approx_u">
+<DESCRIPTION>Approximated closest distance in einstein radii</DESCRIPTION>
+</FIELD>
+<FIELD ID="approx_u_error" datatype="double" name="approx_u_error">
+<DESCRIPTION>Error of the approximated closest distance in einstein radii</DESCRIPTION>
+</FIELD>
+<FIELD ID="approx_shift" datatype="double" name="approx_shift" unit="mas">
+<DESCRIPTION>Approximated maximal astrometric shift of the center of light</DESCRIPTION>
+</FIELD>
+<FIELD ID="approx_shift_error" datatype="double" name="approx_shift_error" unit="mas">
+<DESCRIPTION>Error of the approximated shift of the center of light</DESCRIPTION>
+</FIELD>
+<FIELD ID="approx_shift_lum" datatype="double" name="approx_shift_lum" unit="mas">
+<DESCRIPTION>Approximated maximal astrometric shift includig lens-luminosity
+     effects</DESCRIPTION>
+</FIELD>
+<FIELD ID="approx_shift_lum_error" datatype="double" name="approx_shift_lum_error" unit="mas">
+<DESCRIPTION>Error of the approximated shift includig lens-luminosity effects</DESCRIPTION>
+</FIELD>
+<FIELD ID="approx_shift_plus" datatype="double" name="approx_shift_plus" unit="mas">
+<DESCRIPTION>Approximated maximal astrometric shift of image (+)</DESCRIPTION>
+</FIELD>
+<FIELD ID="approx_shift_plus_error" datatype="double" name="approx_shift_plus_error" unit="mas">
+<DESCRIPTION>Error of the approximated shift of image (+)</DESCRIPTION>
+</FIELD>
+<FIELD ID="approx_magnification" datatype="double" name="approx_magnification" unit="mag">
+<DESCRIPTION>Approximated magnification in magnitude</DESCRIPTION>
+</FIELD>
+<FIELD ID="approx_magnification_error" datatype="double" name="approx_magnification_error" unit="mag">
+<DESCRIPTION>Error of the approximated magnification</DESCRIPTION>
+</FIELD>
+<FIELD ID="date" datatype="double" name="date" unit="yr">
+<DESCRIPTION>Time of the closest approch</DESCRIPTION>
+</FIELD>
+<FIELD ID="date_error" datatype="double" name="date_error" unit="yr">
+<DESCRIPTION>Error of the Time of theclosest approch</DESCRIPTION>
+</FIELD>
+<FIELD ID="dist" datatype="double" name="dist" unit="mas">
+<DESCRIPTION>Closest distance</DESCRIPTION>
+</FIELD>
+<FIELD ID="dist_error" datatype="double" name="dist_error" unit="mas">
+<DESCRIPTION>Error of the closest distance</DESCRIPTION>
+</FIELD>
+<FIELD ID="u" datatype="double" name="u">
+<DESCRIPTION>Closest distance in einstein radii</DESCRIPTION>
+</FIELD>
+<FIELD ID="u_error" datatype="double" name="u_error">
+<DESCRIPTION>Error of the closest distance in einstein radii</DESCRIPTION>
+</FIELD>
+<FIELD ID="shift" datatype="double" name="shift" unit="mas">
+<DESCRIPTION>Expected maximal astrometric shift of the center of light</DESCRIPTION>
+</FIELD>
+<FIELD ID="shift_error" datatype="double" name="shift_error" unit="mas">
+<DESCRIPTION>Error of the  shift of the center of light</DESCRIPTION>
+</FIELD>
+<FIELD ID="shift_lum" datatype="double" name="shift_lum" unit="mas">
+<DESCRIPTION>Expected maximal astrometric shift includig lens-luminosity
+     effects</DESCRIPTION>
+</FIELD>
+<FIELD ID="shift_lum_error" datatype="double" name="shift_lum_error" unit="mas">
+<DESCRIPTION>Error of the  shift includig lens-luminosity effects</DESCRIPTION>
+</FIELD>
+<FIELD ID="shift_plus" datatype="double" name="shift_plus" unit="mas">
+<DESCRIPTION>Expected maximal astrometric shift of image (+)</DESCRIPTION>
+</FIELD>
+<FIELD ID="shift_plus_error" datatype="double" name="shift_plus_error" unit="mas">
+<DESCRIPTION>Error of the  shift of image (+)</DESCRIPTION>
+</FIELD>
+<FIELD ID="magnification" datatype="double" name="magnification" unit="mag">
+<DESCRIPTION>Magnification in magnitudes</DESCRIPTION>
+</FIELD>
+<FIELD ID="magnification_error" datatype="double" name="magnification_error" unit="mag">
+<DESCRIPTION>Error of the magnification in magnitudes</DESCRIPTION>
+</FIELD>
+<FIELD ID="further_approch" datatype="boolean" name="further_approch">
+<DESCRIPTION>Is there a second approch with an expected shift &gt; 0.1 mas</DESCRIPTION>
+</FIELD>
+<FIELD ID="L2_date" datatype="double" name="L2_date" unit="yr">
+<DESCRIPTION>Time of the closest approch for Lagrange Point 2 parallax</DESCRIPTION>
+</FIELD>
+<FIELD ID="L2_date_error" datatype="double" name="L2_date_error" unit="yr">
+<DESCRIPTION>Error of the Time of theclosest approch for Lagrange Point 2
+     parallax</DESCRIPTION>
+</FIELD>
+<FIELD ID="L2_dist" datatype="double" name="L2_dist" unit="mas">
+<DESCRIPTION>Closest distance for Lagrange Point  2 parallax</DESCRIPTION>
+</FIELD>
+<FIELD ID="L2_dist_error" datatype="double" name="L2_dist_error" unit="mas">
+<DESCRIPTION>Error of the closest distance for Lagrange Point 2 parallax</DESCRIPTION>
+</FIELD>
+<FIELD ID="L2_u" datatype="double" name="L2_u">
+<DESCRIPTION>Closest distance in einstein radii for Lagrange Point  2 parallax</DESCRIPTION>
+</FIELD>
+<FIELD ID="L2_u_error" datatype="double" name="L2_u_error">
+<DESCRIPTION>Error of the closest distance in einstein radii for Lagrange
+     Point 2 parallax</DESCRIPTION>
+</FIELD>
+<FIELD ID="L2_shift" datatype="double" name="L2_shift" unit="mas">
+<DESCRIPTION>Expected maximal astrometric shift of the center of light for
+     Lagrange Point 2 parallax</DESCRIPTION>
+</FIELD>
+<FIELD ID="L2_shift_error" datatype="double" name="L2_shift_error" unit="mas">
+<DESCRIPTION>Error of the shift of the center of light for Lagrange Point 2
+     parallax</DESCRIPTION>
+</FIELD>
+<FIELD ID="L2_shift_lum" datatype="double" name="L2_shift_lum" unit="mas">
+<DESCRIPTION>Expected maximal  shift includig lens-luminosity effects for
+     Lagrange Point 2 parallax</DESCRIPTION>
+</FIELD>
+<FIELD ID="L2_shift_lum_error" datatype="double" name="L2_shift_lum_error" unit="mas">
+<DESCRIPTION>Error of the shift includig lens-luminosity effects for Lagrange
+     Point 2 parallax</DESCRIPTION>
+</FIELD>
+<FIELD ID="L2_shift_plus" datatype="double" name="L2_shift_plus" unit="mas">
+<DESCRIPTION>Expected maximal  shift of image (+) for Lagrange Point 2
+     parallax</DESCRIPTION>
+</FIELD>
+<FIELD ID="L2_shift_plus_error" datatype="double" name="L2_shift_plus_error" unit="mas">
+<DESCRIPTION>Error of the shift of image (+) for Lagrange Point 2 parallax</DESCRIPTION>
+</FIELD>
+<FIELD ID="L2_magnification" datatype="double" name="L2_magnification" unit="mag">
+<DESCRIPTION>Magnification in magnitudes for Lagrange Point 2 parallax</DESCRIPTION>
+</FIELD>
+<FIELD ID="L2_magnification_error" datatype="double" name="L2_magnification_error" unit="mag">
+<DESCRIPTION>Error of the magnification in magnitudes for Lagrange Point 2
+     parallax</DESCRIPTION>
+</FIELD>
+<FIELD ID="L2_further_approch" datatype="boolean" name="L2_further_approch">
+<DESCRIPTION>Is there a second approch with an expected shift &gt; 0.1 mas for
+     Lagrange Point 2 parallax</DESCRIPTION>
+</FIELD>
+<FIELD datatype="int" name="GroupID">
+<DESCRIPTION>ID for match group</DESCRIPTION>
+<VALUES null='-2147483648'/>
+</FIELD>
+<FIELD datatype="int" name="GroupSize">
+<DESCRIPTION>Number of rows in match group</DESCRIPTION>
+<VALUES null='-2147483648'/>
+</FIELD>
+<!-- Dummy VOTable - no DATA element -->
+</TABLE>
+</RESOURCE>
+</VOTABLE>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    XTENSION= 'BINTABLE'           / binary table extension                         BITPIX  =                    8 / 8-bit bytes                                    NAXIS   =                    2 / 2-dimensional table                            NAXIS1  =                  588 / width of table in bytes                        NAXIS2  =                    5 / number of rows in table                        PCOUNT  =                    0 / size of special data area                      GCOUNT  =                    1 / one data group                                 TFIELDS =                   81 / number of columns                              EXTNAME = 'Joined  '           / table name                                     TTYPE1  = 'source_id'          / label for column 1                             TFORM1  = 'K       '           / format for column 1                            TNULL1  =                   -1 / blank value for column 1                       TUCD1   = 'meta.id;meta.main'                                                   TTYPE2  = 'ra      '           / label for column 2                             TFORM2  = 'D       '           / format for column 2                            TUNIT2  = 'deg     '           / units for column 2                             TCOMM2  = 'Barycentric Right Ascension in ICRS at ref_epoch'                    TUCD2   = 'pos.eq.ra;meta.main'                                                 TTYPE3  = 'dec     '           / label for column 3                             TFORM3  = 'D       '           / format for column 3                            TUNIT3  = 'deg     '           / units for column 3                             TCOMM3  = 'Barycentric Declination in ICRS at ref_epoch'                        TUCD3   = 'pos.eq.dec;meta.main'                                                TTYPE4  = 'ra_error'           / label for column 4                             TFORM4  = 'E       '           / format for column 4                            TUNIT4  = 'mas     '           / units for column 4                             TCOMM4  = 'Standard error of ra (with cos ? applied).'                          TUCD4   = 'stat.error;pos.eq.ra'                                                TTYPE5  = 'dec_error'          / label for column 5                             TFORM5  = 'E       '           / format for column 5                            TUNIT5  = 'mas     '           / units for column 5                             TCOMM5  = 'Standard error of dec'                                               TUCD5   = 'stat.error;pos.eq.dec'                                               TTYPE6  = 'pmra    '           / label for column 6                             TFORM6  = 'E       '           / format for column 6                            TUNIT6  = 'mas.yr-1'           / units for column 6                             TUCD6   = 'pos.pm;pos.eq.ra'                                                    TTYPE7  = 'pmdec   '           / label for column 7                             TFORM7  = 'E       '           / format for column 7                            TUNIT7  = 'mas.yr-1'           / units for column 7                             TCOMM7  = 'Proper motion in declination at ref_epoch.'                          TUCD7   = 'pos.pm;pos.eq.dec'                                                   TTYPE8  = 'pmra_error'         / label for column 8                             TFORM8  = 'E       '           / format for column 8                            TUNIT8  = 'mas.yr-1'           / units for column 8                             TCOMM8  = 'Standard error of pmra'                                              TUCD8   = 'stat.error;pos.pm;pos.eq.ra'                                         TTYPE9  = 'pmdec_error'        / label for column 9                             TFORM9  = 'E       '           / format for column 9                            TUNIT9  = 'mas.yr-1'           / units for column 9                             TCOMM9  = 'Standard error of pmdec'                                             TUCD9   = 'stat.error;pos.pm;pos.eq.dec'                                        TTYPE10 = 'parallax'           / label for column 10                            TFORM10 = 'E       '           / format for column 10                           TUNIT10 = 'mas     '           / units for column 10                            TUCD10  = 'pos.parallax'                                                        TTYPE11 = 'parallax_error'     / label for column 11                            TFORM11 = 'E       '           / format for column 11                           TUNIT11 = 'mas     '           / units for column 11                            TCOMM11 = 'Standard error of parallax'                                          TUCD11  = 'stat.error;pos.parallax'                                             TTYPE12 = 'phot_g_mean_mag'    / label for column 12                            TFORM12 = 'E       '           / format for column 12                           TUNIT12 = 'mag     '           / units for column 12                            TUCD12  = 'phot.mag;em.opt;stat.mean'                                           TTYPE13 = 'phot_rp_mean_mag'   / label for column 13                            TFORM13 = 'E       '           / format for column 13                           TUNIT13 = 'mag     '           / units for column 13                            TUCD13  = 'phot.mag;em.opt.R'                                                   TTYPE14 = 'phot_bp_mean_mag'   / label for column 14                            TFORM14 = 'E       '           / format for column 14                           TUNIT14 = 'mag     '           / units for column 14                            TUCD14  = 'phot.mag;em.opt.B'                                                   TTYPE15 = 'roi     '           / label for column 15                            TFORM15 = '8D      '           / format for column 15                           TTYPE16 = 'ob_source_id'       / label for column 16                            TFORM16 = 'K       '           / format for column 16                           TNULL16 =                   -1 / blank value for column 16                      TCOMM16 = 'source_id value for the lensed object'                               TUCD16  = 'meta.id;meta.main'                                                   TTYPE17 = 'ob_ra   '           / label for column 17                            TFORM17 = 'D       '           / format for column 17                           TUNIT17 = 'deg     '           / units for column 17                            TCOMM17 = 'ra value for the lensed object'                                      TUCD17  = 'pos.eq.ra;meta.main'                                                 TTYPE18 = 'ob_dec  '           / label for column 18                            TFORM18 = 'D       '           / format for column 18                           TUNIT18 = 'deg     '           / units for column 18                            TCOMM18 = 'dec value for the lensed object'                                     TUCD18  = 'pos.eq.dec;meta.main'                                                TTYPE19 = 'ob_ra_error'        / label for column 19                            TFORM19 = 'E       '           / format for column 19                           TUNIT19 = 'mas     '           / units for column 19                            TCOMM19 = 'ra_error value for the lensed object'                                TUCD19  = 'stat.error;pos.eq.ra'                                                TTYPE20 = 'ob_dec_error'       / label for column 20                            TFORM20 = 'E       '           / format for column 20                           TUNIT20 = 'mas     '           / units for column 20                            TCOMM20 = 'dec_error value for the lensed object'                               TUCD20  = 'stat.error;pos.eq.dec'                                               TTYPE21 = 'ob_pmra '           / label for column 21                            TFORM21 = 'E       '           / format for column 21                           TUNIT21 = 'mas.yr-1'           / units for column 21                            TCOMM21 = 'pmra value for the lensed object'                                    TUCD21  = 'pos.pm;pos.eq.ra'                                                    TTYPE22 = 'ob_pmdec'           / label for column 22                            TFORM22 = 'E       '           / format for column 22                           TUNIT22 = 'mas.yr-1'           / units for column 22                            TCOMM22 = 'pmdec value for the lensed object'                                   TUCD22  = 'pos.pm;pos.eq.dec'                                                   TTYPE23 = 'ob_pmra_error'      / label for column 23                            TFORM23 = 'E       '           / format for column 23                           TUNIT23 = 'mas.yr-1'           / units for column 23                            TCOMM23 = 'pmra_error value for the lensed object'                              TUCD23  = 'stat.error;pos.pm;pos.eq.ra'                                         TTYPE24 = 'ob_pmdec_error'     / label for column 24                            TFORM24 = 'E       '           / format for column 24                           TUNIT24 = 'mas.yr-1'           / units for column 24                            TCOMM24 = 'pmdec_error value for the lensed object'                             TUCD24  = 'stat.error;pos.pm;pos.eq.dec'                                        TTYPE25 = 'ob_parallax'        / label for column 25                            TFORM25 = 'E       '           / format for column 25                           TUNIT25 = 'mas     '           / units for column 25                            TCOMM25 = 'parallax value for the lensed object'                                TUCD25  = 'pos.parallax'                                                        TTYPE26 = 'ob_parallax_error'  / label for column 26                            TFORM26 = 'E       '           / format for column 26                           TUNIT26 = 'mas     '           / units for column 26                            TCOMM26 = 'parallax_error value for the lensed object'                          TUCD26  = 'stat.error;pos.parallax'                                             TTYPE27 = 'ob_phot_g_mean_mag' / label for column 27                            TFORM27 = 'E       '           / format for column 27                           TUNIT27 = 'mag     '           / units for column 27                            TCOMM27 = 'phot_g_mean_mag value for the lensed object'                         TUCD27  = 'phot.mag;em.opt;stat.mean'                                           TTYPE28 = 'ob_phot_rp_mean_mag' / label for column 28                           TFORM28 = 'E       '           / format for column 28                           TUNIT28 = 'mag     '           / units for column 28                            TCOMM28 = 'phot_rp_mean_mag value for the lensed object'                        TUCD28  = 'phot.mag;em.opt.R'                                                   TTYPE29 = 'ob_phot_bp_mean_mag' / label for column 29                           TFORM29 = 'E       '           / format for column 29                           TUNIT29 = 'mag     '           / units for column 29                            TCOMM29 = 'phot_bp_mean_mag value for the lensed object'                        TUCD29  = 'phot.mag;em.opt.B'                                                   TTYPE30 = 'star_type'          / label for column 30                            TFORM30 = '2A      '           / format for column 30                           TTYPE31 = 'mass    '           / label for column 31                            TFORM31 = 'D       '           / format for column 31                           TUNIT31 = 'solMass '           / units for column 31                            TCOMM31 = 'Mass of the lensing star'                                            TTYPE32 = 'mass_error'         / label for column 32                            TFORM32 = 'D       '           / format for column 32                           TUNIT32 = 'solMass '           / units for column 32                            TCOMM32 = 'Error of the Mass of the lensing star'                               TTYPE33 = 'thetaE  '           / label for column 33                            TFORM33 = 'D       '           / format for column 33                           TUNIT33 = 'mas     '           / units for column 33                            TCOMM33 = 'Einstein radius of the event'                                        TTYPE34 = 'thetaE_error'       / label for column 34                            TFORM34 = 'D       '           / format for column 34                           TUNIT34 = 'mas     '           / units for column 34                            TCOMM34 = 'Error of the Einstein radius'                                        TTYPE35 = 'time_scale'         / label for column 35                            TFORM35 = 'D       '           / format for column 35                           TUNIT35 = 'yr      '           / units for column 35                            TCOMM35 = 'Approximated duration of an event'                                   TTYPE36 = 'approx_date'        / label for column 36                            TFORM36 = 'D       '           / format for column 36                           TUNIT36 = 'yr      '           / units for column 36                            TCOMM36 = 'Time of the approximated closest approch'                            TTYPE37 = 'approx_date_error'  / label for column 37                            TFORM37 = 'D       '           / format for column 37                           TUNIT37 = 'yr      '           / units for column 37                            TCOMM37 = 'Error of the Time of the approximated closest approch'               TTYPE38 = 'approx_dist'        / label for column 38                            TFORM38 = 'D       '           / format for column 38                           TUNIT38 = 'mas     '           / units for column 38                            TCOMM38 = 'Approximated closest distance'                                       TTYPE39 = 'approx_dist_error'  / label for column 39                            TFORM39 = 'D       '           / format for column 39                           TUNIT39 = 'mas     '           / units for column 39                            TCOMM39 = 'Error of approximated closest distance'                              TTYPE40 = 'approx_u'           / label for column 40                            TFORM40 = 'D       '           / format for column 40                           TCOMM40 = 'Approximated closest distance in einstein radii'                     TTYPE41 = 'approx_u_error'     / label for column 41                            TFORM41 = 'D       '           / format for column 41                           TCOMM41 = 'Error of the approximated closest distance in einstein radii'        TTYPE42 = 'approx_shift'       / label for column 42                            TFORM42 = 'D       '           / format for column 42                           TUNIT42 = 'mas     '           / units for column 42                            TCOMM42 = 'Approximated maximal astrometric shift of the center of light'       TTYPE43 = 'approx_shift_error' / label for column 43                            TFORM43 = 'D       '           / format for column 43                           TUNIT43 = 'mas     '           / units for column 43                            TCOMM43 = 'Error of the approximated shift of the center of light'              TTYPE44 = 'approx_shift_lum'   / label for column 44                            TFORM44 = 'D       '           / format for column 44                           TUNIT44 = 'mas     '           / units for column 44                            TTYPE45 = 'approx_shift_lum_error' / label for column 45                        TFORM45 = 'D       '           / format for column 45                           TUNIT45 = 'mas     '           / units for column 45                            TCOMM45 = 'Error of the approximated shift includig lens-luminosity effects'    TTYPE46 = 'approx_shift_plus'  / label for column 46                            TFORM46 = 'D       '           / format for column 46                           TUNIT46 = 'mas     '           / units for column 46                            TCOMM46 = 'Approximated maximal astrometric shift of image (+)'                 TTYPE47 = 'approx_shift_plus_error' / label for column 47                       TFORM47 = 'D       '           / format for column 47                           TUNIT47 = 'mas     '           / units for column 47                            TCOMM47 = 'Error of the approximated shift of image (+)'                        TTYPE48 = 'approx_magnification' / label for column 48                          TFORM48 = 'D       '           / format for column 48                           TUNIT48 = 'mag     '           / units for column 48                            TCOMM48 = 'Approximated magnification in magnitude'                             TTYPE49 = 'approx_magnification_error' / label for column 49                    TFORM49 = 'D       '           / format for column 49                           TUNIT49 = 'mag     '           / units for column 49                            TCOMM49 = 'Error of the approximated magnification'                             TTYPE50 = 'date    '           / label for column 50                            TFORM50 = 'D       '           / format for column 50                           TUNIT50 = 'yr      '           / units for column 50                            TCOMM50 = 'Time of the closest approch'                                         TTYPE51 = 'date_error'         / label for column 51                            TFORM51 = 'D       '           / format for column 51                           TUNIT51 = 'yr      '           / units for column 51                            TCOMM51 = 'Error of the Time of theclosest approch'                             TTYPE52 = 'dist    '           / label for column 52                            TFORM52 = 'D       '           / format for column 52                           TUNIT52 = 'mas     '           / units for column 52                            TCOMM52 = 'Closest distance'                                                    TTYPE53 = 'dist_error'         / label for column 53                            TFORM53 = 'D       '           / format for column 53                           TUNIT53 = 'mas     '           / units for column 53                            TCOMM53 = 'Error of the closest distance'                                       TTYPE54 = 'u       '           / label for column 54                            TFORM54 = 'D       '           / format for column 54                           TCOMM54 = 'Closest distance in einstein radii'                                  TTYPE55 = 'u_error '           / label for column 55                            TFORM55 = 'D       '           / format for column 55                           TCOMM55 = 'Error of the closest distance in einstein radii'                     TTYPE56 = 'shift   '           / label for column 56                            TFORM56 = 'D       '           / format for column 56                           TUNIT56 = 'mas     '           / units for column 56                            TCOMM56 = 'Expected maximal astrometric shift of the center of light'           TTYPE57 = 'shift_error'        / label for column 57                            TFORM57 = 'D       '           / format for column 57                           TUNIT57 = 'mas     '           / units for column 57                            TCOMM57 = 'Error of the  shift of the center of light'                          TTYPE58 = 'shift_lum'          / label for column 58                            TFORM58 = 'D       '           / format for column 58                           TUNIT58 = 'mas     '           / units for column 58                            TTYPE59 = 'shift_lum_error'    / label for column 59                            TFORM59 = 'D       '           / format for column 59                           TUNIT59 = 'mas     '           / units for column 59                            TCOMM59 = 'Error of the  shift includig lens-luminosity effects'                TTYPE60 = 'shift_plus'         / label for column 60                            TFORM60 = 'D       '           / format for column 60                           TUNIT60 = 'mas     '           / units for column 60                            TCOMM60 = 'Expected maximal astrometric shift of image (+)'                     TTYPE61 = 'shift_plus_error'   / label for column 61                            TFORM61 = 'D       '           / format for column 61                           TUNIT61 = 'mas     '           / units for column 61                            TCOMM61 = 'Error of the  shift of image (+)'                                    TTYPE62 = 'magnification'      / label for column 62                            TFORM62 = 'D       '           / format for column 62                           TUNIT62 = 'mag     '           / units for column 62                            TCOMM62 = 'Magnification in magnitudes'                                         TTYPE63 = 'magnification_error' / label for column 63                           TFORM63 = 'D       '           / format for column 63                           TUNIT63 = 'mag     '           / units for column 63                            TCOMM63 = 'Error of the magnification in magnitudes'                            TTYPE64 = 'further_approch'    / label for column 64                            TFORM64 = 'L       '           / format for column 64                           TCOMM64 = 'Is there a second approch with an expected shift > 0.1 mas'          TTYPE65 = 'L2_date '           / label for column 65                            TFORM65 = 'D       '           / format for column 65                           TUNIT65 = 'yr      '           / units for column 65                            TCOMM65 = 'Time of the closest approch for Lagrange Point 2 parallax'           TTYPE66 = 'L2_date_error'      / label for column 66                            TFORM66 = 'D       '           / format for column 66                           TUNIT66 = 'yr      '           / units for column 66                            TTYPE67 = 'L2_dist '           / label for column 67                            TFORM67 = 'D       '           / format for column 67                           TUNIT67 = 'mas     '           / units for column 67                            TCOMM67 = 'Closest distance for Lagrange Point  2 parallax'                     TTYPE68 = 'L2_dist_error'      / label for column 68                            TFORM68 = 'D       '           / format for column 68                           TUNIT68 = 'mas     '           / units for column 68                            TCOMM68 = 'Error of the closest distance for Lagrange Point 2 parallax'         TTYPE69 = 'L2_u    '           / label for column 69                            TFORM69 = 'D       '           / format for column 69                           TCOMM69 = 'Closest distance in einstein radii for Lagrange Point  2 parallax'   TTYPE70 = 'L2_u_error'         / label for column 70                            TFORM70 = 'D       '           / format for column 70                           TTYPE71 = 'L2_shift'           / label for column 71                            TFORM71 = 'D       '           / format for column 71                           TUNIT71 = 'mas     '           / units for column 71                            TTYPE72 = 'L2_shift_error'     / label for column 72                            TFORM72 = 'D       '           / format for column 72                           TUNIT72 = 'mas     '           / units for column 72                            TTYPE73 = 'L2_shift_lum'       / label for column 73                            TFORM73 = 'D       '           / format for column 73                           TUNIT73 = 'mas     '           / units for column 73                            TTYPE74 = 'L2_shift_lum_error' / label for column 74                            TFORM74 = 'D       '           / format for column 74                           TUNIT74 = 'mas     '           / units for column 74                            TTYPE75 = 'L2_shift_plus'      / label for column 75                            TFORM75 = 'D       '           / format for column 75                           TUNIT75 = 'mas     '           / units for column 75                            TTYPE76 = 'L2_shift_plus_error' / label for column 76                           TFORM76 = 'D       '           / format for column 76                           TUNIT76 = 'mas     '           / units for column 76                            TCOMM76 = 'Error of the shift of image (+) for Lagrange Point 2 parallax'       TTYPE77 = 'L2_magnification'   / label for column 77                            TFORM77 = 'D       '           / format for column 77                           TUNIT77 = 'mag     '           / units for column 77                            TCOMM77 = 'Magnification in magnitudes for Lagrange Point 2 parallax'           TTYPE78 = 'L2_magnification_error' / label for column 78                        TFORM78 = 'D       '           / format for column 78                           TUNIT78 = 'mag     '           / units for column 78                            TTYPE79 = 'L2_further_approch' / label for column 79                            TFORM79 = 'L       '           / format for column 79                           TTYPE80 = 'GroupID '           / label for column 80                            TFORM80 = 'J       '           / format for column 80                           TCOMM80 = 'ID for match group'                                                  TTYPE81 = 'GroupSize'          / label for column 81                            TFORM81 = 'J       '           / format for column 81                           TCOMM81 = 'Number of rows in match group'                                       DATE-HDU= '2018-10-30T22:40:46' / Date of HDU creation (UTC)                    STILVERS= '3.1-2   '           / Version of STIL software                       STILCLAS= 'uk.ac.starlink.votable.FitsPlusTableWriter' / Author class in STIL soEND                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ˙ÿq ‡Ó @sÀˆª≤V@Ca∑tÖe
+=ïï =∞•üEÇ!\EK◊>Dë∞>ùıCé˘=Œàﬂ@ñÌ˙@Äyß@Æ∂√@sÀ€ôï—@C`‚Ü]ZG@sÕ,‘› {@CgLU`“@sÕ C=èı@Cg∞ dÛ@sÀœ|%K@CaF˚`§-˙Ÿ! ‡Û @sÀ·2éúø@Casi£N¢<ó§Õ<ŒÎˆ¿ŒU2¡§ç=öˆ=P◊S@%ﬁ<‡BñA8UõA1ﬁ”A<ÄùMS?‰	îCSb?∞©∞5‹O@C"T<?˛iﬂD_"@VAö«í@üq¿Â◊øö?´_Ö@•°a@©2ÿ+òó@qµ∞≈Jﬂπ@U5Á≠W'@!&¯ÖEÏÊ?‹´i“$∞M?©⁄êD4†Ω?K–"ÎgÌ?Ø7ó∑?‹¨n◊πÂ]?©‹ˆdÎÈ=’œ-ä^äˇ=¡°ß ¸sf@ür5›◊?4ÏŸâÄã@®Â’ûhí?ˇ=áû!˙]@TÙmaíÇ@√‰l ≥Z?›Ú’j=&?†ip6«w?L'∞ÉbÈ?⁄2©ñí≠?›ái˜D?†j¢khkí=÷‰∏$'Z=≤Oû~∞+iF@ür7“<ï?5
+∫≈!gy@®„OOa†?ˇ}jU€b≈@TÚı7cﬁ‹@¬π„¢3?›˚/H®Ü?†jó &Ó{?L)»›Úˇ?‹op®≥?›
+3ë??†k…u@”Ò=÷Î!¿9∂Ö=≤T¬£∑F      ˙ÿq ‡Ó @sÀˆª≤V@Ca∑tÖe
+=ïï =∞•üEÇ!\EK◊>Dë∞>ùıCé˘=Œàﬂ@ñÌ˙@Äyß@Æ∂√@sÀ€ôï—@C`‚Ü]ZG@sÕ,‘› {@CgLU`“@sÕ C=èı@Cg∞ dÛ@sÀœ|%K@CaF˚`§-˙ÿy ‡‡Ä@sÃ$Páò?@Cb≠—Ø`é>ó“¶?5YøO&ÚøÖ¶?=ªk?ƒeA?[∫>œ2úAú*eAëEmAö˛ëMS?‰	îCSb?∞©∞5‹O@Cˇg2¯?˛Çnêı Ñ@…éËW@üù?ÕE¸Û?´•f¶“–@†çÉ4cj@q’pöé(H@K»xœ°@@Ìä∞µ√Ì?ÂÚèâ©0?∫≠KWÚÁ>´î®‹Œ"¢>Ä»ì„#?ÂÙa˘¨‹?∫≥tÎ°ìt=S+á∆†µ=FnlNSÓ@üùaùk˛±?Z¥61Âû@°ÿë|>2@$ªõdmaÈ@MÛ¢∑F€@˘˘ìÒÑ?‰[„aÎ'<?ß˛êä>©ïéﬂ]>mfÑ\´e?‰]W3Æî?ßUv¸¶=LfÒÃäÄ=&Ã/«àÍF@üùa¯ØÓÑ?ZµÌ˜@ú@°€¯®Ân¶@$º»-m¬,@M˘XÿˆÔ¡@âﬁÒxø?‰Xah?ß¢„}Y]>©ê$™"·Ì>l˚€è4^_?‰Yv^Çr ?ßÌxìÎE=LT∑ƒﬂR4=&∫—–ö F      ˙ÿq ‡Ó @sÀˆª≤V@Ca∑tÖe
+=ïï =∞•üEÇ!\EK◊>Dë∞>ùıCé˘=Œàﬂ@ñÌ˙@Äyß@Æ∂√@sÀ€ôï—@C`‚Ü]ZG@sÕ,‘› {@CgLU`“@sÕ C=èı@Cg∞ dÛ@sÀœ|%K@CaF˚`§-˙ÿy ne @sÃ3Ñ8ı@Cb¥t’1É>Ç¥Ÿ>ùıÒ¿HïÍ¿b‰? Êm?)ã>º8>ƒÁAúAíÏWAú~ëMS?‰	îCSb?∞©∞5‹O@C!£Í±?˛å)æ'x@X–-	≥Ç@ü£»k†ÿ?´Ø‹6l%k@≠Y1æÂ’@qﬁ[‹ÅÏ@X[Ú~û@!›—riß=?Ÿßoå3x?§Ú6Oü”}>üª~2+A=>jÉôw‚H?ŸTñ≥Y◊?§Û•ÙÆ	∫= k¯x?:ó=tJA@É@ü§L#Ré#?RÈ˚2†I{@¨qZ{K@!lfV5G@WÅ;∫)@—1ª‘¥^?Ÿ˚ÛsÒ-Ñ?ùg%kÿœ>†p…àø≈>bõù*àñZ?Ÿ¸¥—€ú?ùhŸãZü˜="›Z…õ%§<˛3õ©jeTF@ü§L§–?RÌF˚|«à@¨ßyõ@$>Ë¯P¸@W~5Èê£@Œ®nπe?Ÿˇv#ºD}?ùkpN»>†sfπΩN>bû!¿«Ò?⁄ 7¡‡ë?ùl”◊¡'="›Z…õ%§<˛CÛ˝rh˝F      ˙ÿq ‡Ó @sÀˆª≤V@Ca∑tÖe
+=ïï =∞•üEÇ!\EK◊>Dë∞>ùıCé˘=Œàﬂ@ñÌ˙@Äyß@Æ∂√@sÀ€ôï—@C`‚Ü]ZG@sÕ,‘› {@CgLU`“@sÕ C=èı@Cg∞ dÛ@sÀœ|%K@CaF˚`§-˙ÿx ~£Ä@sÃµ≠
+F@Cbã€®†˙>=ë%>ú5øÍC¿G]> Zh?&:*>›˜b>ôÛ•Aî—∑AãJ¡Aî∞!MS?‰	îCSb?∞©∞5‹O@C°ıÇâ?˛á‰ˆ˙ÏJ@√Ò€œ('@üïGRÑ’?´®ßCêï˜@≥*˙ãÎ«?@qÿ≥†wnï@`º˝9≈@#ª,◊?~?“˝Ãﬂ;õ`?õ“´…H!>´…k(w`à>t[è¡@w◊?“˛%∂Ô?õ”¥„ˆ⁄@=¯–ï ÒÉ<˛üIÅ†!@üñy’¢–C?Cıe˜cÿx@≤¶ÿ<{˝s@Ìå},˘©@_Gﬂ˛z—@{I@k|?”ÑNÑˆò3?ñ¶8"v>¨éDêˆØ>p'“"%Œ?”Ñ†7Àﬂ≥?ñ_p=ØØöΩ—<ˆCPtF@üñz©ì¿?C¯ø=°¶^@≤•Ÿ≥¬8@ÒA_=à@_D’,7ßP@vì˜?”Ü4Åà¶?ñÃÂJ>¨ëœ0)W>p)d¢îã?”ÜÜKÕ:y?ñÖ%]Uñ=ØØöΩ—<ˆK»H9ÑF      ˙ÿq ‡Ó @sÀˆª≤V@Ca∑tÖe
+=ïï =∞•üEÇ!\EK◊>Dë∞>ùıCé˘=Œàﬂ@ñÌ˙@Äyß@Æ∂√@sÀ€ôï—@C`‚Ü]ZG@sÕ,‘› {@CgLU`“@sÕ C=èı@Cg∞ dÛ@sÀœ|%K@CaF˚`§-˙ÿy nàÄ@sÃ*3Q‹ù@CbÔ¯îÂ>{°ı>√˙±øí<!¿û»6?y?QÚEæ}|≥>™åúAõiyAí∫*AõtÒMS?‰	îCSb?∞©∞5‹O@CÅäë,?˛å˛› âƒ@ôuÉÉ≈@ü¢˙∞”I„?´∫É® |]@¥èi1¿Ï@q‰Ú¢°„@a:Ä¢zn@$]ËàÆg?—ªÀÿıæ?ôN+Uï†>òI∂Bl0>aUû&£ö#?—ªK˜◊›?ôN˙fuô$=Í&T¢è<‰Í¢„‰Á@ü¢Ÿ¢uA_?SÜPüˇA@≥±]#¬@®5ãî˝R@`Ä'|õ7Î@ik ¥fK?“É@4ûà?îÚY…ùGZ>ô\ ∏r≠·>\≤dDÓ.Y?“ÉÖ‘B∆∞?îÚ˜a©¿Ü=+˛¡†_<‡‘DãÈOF@ü¢Ÿu÷ò˘?Sâd,ø„_@≥Æ«“√Ô‚@´lkì@`~E5œ‹°@fhXÒ∆Ô?“Ö]g˙ Í?îÙæyo¥>ô^Ê@'t>\µ¨œ7⁄?“Ö£ ;?îı\G)¿Y=+˛¡†_<‡€ˆ¨¬÷HF                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
